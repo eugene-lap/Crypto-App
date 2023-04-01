@@ -1,3 +1,7 @@
+html{
+    font-family: Arial,sans-serif;
+}
+
 .main-header{
     position: fixed;
     z-index: 50;
@@ -11,4 +15,10 @@
         display: flex;
         justify-content: space-between;
     }
+}
+
+.main{
+    max-width: 1232px;
+    margin: 0 auto;
+    padding-top: 4rem;
 }
