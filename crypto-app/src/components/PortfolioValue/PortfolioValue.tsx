@@ -1,4 +1,4 @@
-import { Briefcase } from "../icons/Briefcase"
+import { Briefcase } from "../../icons/Briefcase"
 import './PortfolioValue.scss'
 
 const PortfolioValue = () => {

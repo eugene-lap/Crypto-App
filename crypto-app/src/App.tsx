@@ -1,7 +1,7 @@
 import './styles/config/normalize.scss'
 import './styles/config/reset.scss';
 import './styles/App.scss';
-import { BurgerMenu, PopularCrypto, PortfolioValue, Table } from './components';
+import { BurgerMenu, PopularCrypto, PortfolioValue, Table, ActiveCryptoPage } from './components';
 
 function App() {
   return (
@@ -14,7 +14,8 @@ function App() {
     </div>
     </header>
     <main className="main">
-      <Table/>
+      {/* <Table/> */}
+      {/* <ActiveCryptoPage/> */}
     </main>
     <footer className="main-footer"></footer>
    </div>
