@@ -1,0 +1,125 @@
+.section-main{
+    &-breadcrumb{
+        &-link{
+            font-size: 14px;
+            color: #B7BDC6;
+            display: flex;
+            gap: 16px;
+        }
+    }
+    &-calculator{
+        width: 24%;
+        &__button{
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background-color: #FCD535;
+            color: #181A20;
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: inherit;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        &__name{
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: #474D57;
+        }
+        &-form{
+            margin-top: 1.5rem;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FAFAFA;
+            &__input{
+                width: 41.6%;
+                border: none;
+                outline: none;
+                color: #1E2329;
+                font-size: 16px;
+                font-size: 20px;
+                line-height: 24px;
+                background: none;
+            }
+            &-crypto{
+                display: flex;
+                align-items: center;
+                &__img{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+                &__symdol{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #1E2329;
+                }
+            }
+        }
+        &-prise{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            white-space: nowrap;
+            color: #707A8A;
+            }
+        }
+    }
+.section-main-info{
+    &-names{
+        width: 39%;
+        padding-top: 3rem;
+        &__img{
+            height: 3rem;
+            width: 3rem;
+            margin-right: 24px;
+        }
+        &__name{
+            display: inline;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 48px;
+            color: #1E2329;
+            margin-right: 16px;
+        }
+        &__symbol{
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            color: #707A8A;
+        }
+        &__prise{
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 36px;
+            color: #1E2329;
+            margin-right: 8px;
+            margin-top: 16px;
+        }
+        &__percent{
+            margin-top: 16px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: green;
+        }
+    }
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+}
+
+.flex-container-calc{
+    display: flex;
+    gap: 2rem;
+}

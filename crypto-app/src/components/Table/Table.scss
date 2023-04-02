@@ -1,0 +1,50 @@
+.table{
+    width: 100%;
+    margin: 0 auto;
+}
+.table-line-crypto{
+    display: flex;
+    justify-content: space-between;
+    :last-child{
+        text-align: end;
+    }
+    &__content{
+        width: 25%;
+        color: #1E2329;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}
+.table-line-inform{
+    display: flex;
+    justify-content: space-between;
+    &__title{
+        width: 25%;
+        color: #707A8A;
+        line-height: 18px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}
+.table-line-crypto:hover{
+    background-color: #F5F5F5;
+}
+
+.table-line-crypto__btn{
+    background: url(./shoppingCart.svg);
+    background-repeat: no-repeat;
+    border: none;
+    width: 35px;
+    height: 35px;
+}
