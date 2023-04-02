@@ -14,8 +14,8 @@ function App() {
     </div>
     </header>
     <main className="main">
-      {/* <Table/> */}
-      {/* <ActiveCryptoPage/> */}
+      <Table/>
+      <ActiveCryptoPage/>
     </main>
     <footer className="main-footer"></footer>
    </div>

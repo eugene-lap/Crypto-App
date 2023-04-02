@@ -1,11 +1,11 @@
 import { iCryptoConstants } from "../../../constants/cryptoConstants"
 import { useState } from "react"
 import { getSplittedPrise,getConvertedPrise } from "../../../utils"
+import { Calculator } from "../../Calculator"
 import './MainSection.scss'
 import { Chart } from "./Chart"
 
 const MainSection = ({cryptoActive}: {cryptoActive: iCryptoConstants}) => {
-    const [cryptoPrise, setCryptoPrise] = useState(0)
     return (
             <div className="section-main">
             <nav className="section-main-breadcrumb">
@@ -29,21 +29,7 @@ const MainSection = ({cryptoActive}: {cryptoActive: iCryptoConstants}) => {
             </div>
             <div className="flex-container-calc">
             <Chart/>
-            <div className="section-main-calculator">
-                <p className="section-main-calculator__name">{cryptoActive.symbol} Price Calculator</p>
-                <div className="section-main-calculator-form">
-                    <input type="text" className="section-main-calculator-form__input" value={cryptoPrise} onChange={(event) => setCryptoPrise(+event.target.value)}/>
-                    <div className="section-main-calculator-form-crypto">
-                        <img src="#" alt="#" className="section-main-calculator-calculator-form-crypto__img" />
-                        <p className="section-main-calculator-form-crypto__symdol">({cryptoActive.symbol})</p>
-                    </div>
-                    </div>
-                    <div className="section-main-calculator-prise">
-                        <label className="section-main-calculator-prise__active">{cryptoPrise}  {cryptoActive.symbol}= </label>
-                        <p className="section-main-calculator-prise__convert">USD ${getConvertedPrise(cryptoPrise, cryptoActive.priceUsd)}</p>
-                    </div>
-                <button className="section-main-calculator__button">Buy {cryptoActive.symbol}</button>
-            </div>
+            <Calculator cryptoActive={cryptoActive}/>
             </div>
         </div>
         </div>
