@@ -1,7 +1,11 @@
 import './styles/config/normalize.scss'
 import './styles/config/reset.scss';
 import './styles/App.scss';
-import { BurgerMenu, PopularCrypto, PortfolioValue, Table, ActiveCryptoPage } from './components';
+import BurgerMenu from './components/BurgerMenu/BurgerMenu';
+import { RunningLine } from './components/RunningLine/RunningLine';
+import {HeaderTittle} from './components/HeaderTittle/HeaderTittle';
+import { Table } from './components/Table/Table';
+import { ActiveCryptoPage } from './components/ActiveCryptoPage/ActiveCryptoPage';
 
 function App() {
   return (
@@ -9,8 +13,8 @@ function App() {
     <header className="main-header">
     <div className="main-header__container">
     <BurgerMenu/>
-    <PopularCrypto/>
-    <PortfolioValue/>
+    <RunningLine/>
+    <HeaderTittle/>
     </div>
     </header>
     <main className="main">

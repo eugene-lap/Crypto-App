@@ -1,8 +1,8 @@
 import Marquee from 'react-fast-marquee'
-import './PopularCrypto.scss'
+import './RunningLine.scss'
 import { start } from 'repl'
 
-const PopularCrypto = () => {
+export const RunningLine = (): JSX.Element => {
     return (
         <Marquee style={{justifyContent: 'space-between'}} className='popular-crypto'>
             <p className="popular-crypto__content">Bitcoin</p>
@@ -11,5 +11,3 @@ const PopularCrypto = () => {
         </Marquee>
     )
 }
-
-export default PopularCrypto

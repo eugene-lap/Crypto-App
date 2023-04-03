@@ -1,8 +1,8 @@
-import Burger from './Burger'
-import Menu from './Menu'
+import {Burger} from './Burger'
+import {Menu} from './Menu'
 import { useState } from "react"
 
-const BurgerMenu = () => {
+export const BurgerMenu = (): JSX.Element => {
     const [active, setActive] = useState(false)
 
     return (

@@ -1,8 +1,6 @@
-interface IBurger{
-    active: boolean, callback: Function
-}
+import { IBurger } from "./Burger.type"
 
-const Burger = ({ active, callback }:IBurger) => {
+export const Burger = ({ active, callback }:IBurger): JSX.Element => {
     return(
         <div className="burger" data-active={`${active}`} onClick = {()=>callback()}>
             <div className="burger__stripe1"></div>
@@ -11,4 +9,3 @@ const Burger = ({ active, callback }:IBurger) => {
       </div>
     )
 }
-export default Burger

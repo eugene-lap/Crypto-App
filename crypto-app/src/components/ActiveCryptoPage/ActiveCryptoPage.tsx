@@ -1,9 +1,10 @@
-import {cryptoConstants, iCryptoConstants} from '../../constants/cryptoConstants'
+import {cryptoConstants} from '../../utils/constants/cryptoConstants'
+import { iCryptoConstants } from '../../types/Interfaces'
 import { useState, useEffect} from 'react'
-import { MainSection } from './MainSection'
-import { InformationSection } from './InformationSection'
+import { MainSection } from './MainSection/MainSection'
+import { InformationSection } from './InformationSection/InformationSection'
 
-const ActiveCryptoPage = () => {
+export const ActiveCryptoPage = (): JSX.Element => {
     const [cryptoActive, setCryptoActive] = useState({} as iCryptoConstants)
     useEffect(() => {
         setCryptoActive(cryptoConstants.find((crypto) => String(crypto.name) === 'Bitcoin') || {} as iCryptoConstants)
@@ -15,5 +16,3 @@ const ActiveCryptoPage = () => {
         </div>
     )
 }
-
-export default ActiveCryptoPage

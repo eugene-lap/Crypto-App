@@ -1,3 +1,7 @@
+import { iCryptoConstants } from "../../types/Interfaces"
+
+export const URLHistoryCrypto = 'https://api.coincap.io/v2/assets/bitcoin/history?interval=m1'
+
 export const  cryptoConstants : iCryptoConstants[] = [
     {
         "id":"bitcoin",
@@ -71,17 +75,3 @@ export const  cryptoConstants : iCryptoConstants[] = [
       },
 ]
 
-export interface iCryptoConstants  {
-        "id": string,
-        "rank": string,
-        "symbol": string,
-        "name": string,
-        "supply": string,
-        "maxSupply":null | string,
-        "marketCapUsd": string,
-        "volumeUsd24Hr": string,
-        "priceUsd": string,
-        "changePercent24Hr": string,
-        "vwap24Hr": string,
-        "explorer": string
-}

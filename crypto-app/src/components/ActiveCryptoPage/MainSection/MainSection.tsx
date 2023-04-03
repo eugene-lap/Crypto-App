@@ -1,11 +1,11 @@
-import { iCryptoConstants } from "../../../constants/cryptoConstants"
+import { iCryptoConstants } from "../../../types/Interfaces"
 import { useState } from "react"
-import { getSplittedPrise,getConvertedPrise } from "../../../utils"
-import { Calculator } from "../../Calculator"
+import { getSplittedPrise,getConvertedPrise } from "../../../utils/utils"
+import { Calculator } from "../../Calculator/Calculator"
 import './MainSection.scss'
-import { Chart } from "./Chart"
+import { Chart } from "../../Chart/Chart"
 
-const MainSection = ({cryptoActive}: {cryptoActive: iCryptoConstants}) => {
+export const MainSection = ({cryptoActive}: {cryptoActive: iCryptoConstants}): JSX.Element => {
     return (
             <div className="section-main">
             <nav className="section-main-breadcrumb">
@@ -35,5 +35,3 @@ const MainSection = ({cryptoActive}: {cryptoActive: iCryptoConstants}) => {
         </div>
     )
 }
-
-export default MainSection

@@ -1,15 +1,11 @@
 import './ModalWindow.scss'
-import { Calculator } from '../Calculator'
-import { iCryptoConstants } from "../../constants/cryptoConstants"
+import { Calculator } from '../Calculator/Calculator'
 import { useEffect } from 'react'
+import { IPropsModal } from './ModalWindow.type'
 
-interface IModal {
-    active: boolean,
-    setActive: Function,
-    cryptoActive: iCryptoConstants
-}
 
-const ModalWindow =({active, setActive, cryptoActive}: IModal) =>{
+
+export const ModalWindow =({active, setActive, cryptoActive}: IPropsModal): JSX.Element =>{
     const onKeydown = ({key} : KeyboardEvent) =>{
         if(key === 'Escape'){
             setActive(false)
@@ -32,5 +28,3 @@ const ModalWindow =({active, setActive, cryptoActive}: IModal) =>{
         </div>
     )
 }
-
-export default ModalWindow;

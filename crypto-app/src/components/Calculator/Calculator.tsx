@@ -1,9 +1,9 @@
-import { getSplittedPrise,getConvertedPrise } from "../../utils"
-import { iCryptoConstants } from "../../constants/cryptoConstants"
+import { getSplittedPrise,getConvertedPrise } from "../../utils/utils"
+import { iCryptoConstants } from "../../types/Interfaces"
 import { useState } from "react"
 import './Calculator.scss'
 
-const Calculator = ({cryptoActive}: {cryptoActive:iCryptoConstants}) => {
+export const Calculator = ({cryptoActive}: {cryptoActive:iCryptoConstants}): JSX.Element => {
     const [cryptoPrise, setCryptoPrise] = useState(0)
     return (
         <div className="calculator">
@@ -23,4 +23,3 @@ const Calculator = ({cryptoActive}: {cryptoActive:iCryptoConstants}) => {
             </div>
     )
 }
-export default Calculator
