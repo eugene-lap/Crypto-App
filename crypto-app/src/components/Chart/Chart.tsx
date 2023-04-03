@@ -1,4 +1,3 @@
-import React from 'react';
 import './Chart.scss'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -36,7 +35,7 @@ export const options = {
       position: 'top' as const,
     },
   },
-  ticks:{
+  ticks: {
     maxTicksLimit: 8
   }
 };
@@ -46,12 +45,12 @@ export const Chart = (): JSX.Element => {
   const [cryptoChart, setCryptoChart] = useState([] as ICryptoDate[]);
 
   useEffect(() => {
-    axios 
-    .get(URLHistoryCrypto)
-    .then(data =>{
+    axios
+      .get(URLHistoryCrypto)
+      .then(data => {
         setCryptoChart(data.data.data)
-    })
-  }, [] )
+      })
+  }, [])
   const labels = cryptoChart.map(el => moment(el.date).format('DD.MM.YYYY'))
   const label = cryptoChart.map(el => el.priceUsd)
 
@@ -66,13 +65,13 @@ export const Chart = (): JSX.Element => {
       },
     ],
   };
- 
-  
-  
+
+
+
   return (
-  <div className='chart'>
-    <Line options={options} data={data} />
-  </div>
+    <div className='chart'>
+      <Line options={options} data={data} />
+    </div>
   )
-  
+
 }   
