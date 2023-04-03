@@ -5,7 +5,7 @@ import {getSplittedPrise} from '../../utils/utils'
 import {useState, useEffect} from 'react'
 import { ModalWindow } from '../ModalWindow/ModalWindow'
 import axios from 'axios'
-import { Pagination } from './Pagination'
+import { Pagination } from '../Pagination/Pagination'
 
 export const Table = (): JSX.Element => {
     const [modalActive, setModalActive] = useState(false)
