@@ -1,8 +1,8 @@
 import './InformationSection.scss'
-import { iCryptoConstants } from "../../../constants/cryptoConstants"
-import { getSplittedPrise,getConvertedPrise } from "../../../utils"
+import { iCryptoConstants } from "../../../types/Interfaces"
+import { getSplittedPrise,getConvertedPrise } from "../../../utils/utils"
 
-const InformationSection = ({cryptoActive}: {cryptoActive: iCryptoConstants}) => {
+export const InformationSection = ({cryptoActive}: {cryptoActive: iCryptoConstants}): JSX.Element => {
     return (
     <div className='information'>
         <h3 className="information__main-title">{cryptoActive.symbol} Price Live Data</h3>
@@ -29,5 +29,3 @@ const InformationSection = ({cryptoActive}: {cryptoActive: iCryptoConstants}) =>
     </div>
     )
 }
-
-export default InformationSection;

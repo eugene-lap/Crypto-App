@@ -1,6 +1,6 @@
 import './burgerMenu.css'
 
-const Menu = ({visible}: { visible: boolean}) => {
+export const Menu = ({visible}: { visible: boolean}): JSX.Element => {
     return (
         <ul className="menu" data-visible={`${visible}`}>
             {<li className='menu__item'>
@@ -10,4 +10,3 @@ const Menu = ({visible}: { visible: boolean}) => {
       </ul>
     )  
 }
-export default Menu

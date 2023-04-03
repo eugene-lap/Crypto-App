@@ -1,7 +1,0 @@
-export * from './BurgerMenu'
-export * from './PopularCrypto'
-export * from './PortfolioValue'
-export * from './Table'
-export * from './ActiveCryptoPage'
-export * from './ModalWindow'
-export * from './Calculator'

@@ -1,10 +1,11 @@
 import './Table.scss'
-import { cryptoConstants, iCryptoConstants } from '../../constants/cryptoConstants'
-import {getSplittedPrise} from '../../utils'
-import { useState } from 'react'
-import { ModalWindow } from '../ModalWindow'
+import { cryptoConstants} from '../../utils/constants/cryptoConstants'
+import { iCryptoConstants } from '../../types/Interfaces'
+import {getSplittedPrise} from '../../utils/utils'
+import {useState} from 'react'
+import { ModalWindow } from '../ModalWindow/ModalWindow'
 
-const Table = () => {
+export const Table = (): JSX.Element => {
     const [modalActive, setModalActive] = useState(false)
     const [cryptoActive, setCryptoActive] = useState({} as iCryptoConstants)
     return (
@@ -29,5 +30,3 @@ const Table = () => {
         </table>
     )
 }
-
-export default Table

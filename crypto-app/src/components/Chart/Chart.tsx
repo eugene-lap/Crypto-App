@@ -2,6 +2,8 @@ import React from 'react';
 import './Chart.scss'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { ICryptoDate } from './Chart.type';
+import { URLHistoryCrypto } from '../../utils/constants/cryptoConstants';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -25,11 +27,7 @@ ChartJS.register(
   Legend
 );
 
-interface ICryptoDate {
-  priceUsd: string,
-  time: null, 
-  date: string
-}
+
 
 export const options = {
   responsive: true,
@@ -44,12 +42,12 @@ export const options = {
 };
 
 
-const Chart = () => {
+export const Chart = (): JSX.Element => {
   const [cryptoChart, setCryptoChart] = useState([] as ICryptoDate[]);
 
   useEffect(() => {
     axios 
-    .get('https://api.coincap.io/v2/assets/bitcoin/history?interval=m1')
+    .get(URLHistoryCrypto)
     .then(data =>{
         setCryptoChart(data.data.data)
     })
@@ -77,6 +75,4 @@ const Chart = () => {
   </div>
   )
   
-}    
-
-export default Chart
+}   

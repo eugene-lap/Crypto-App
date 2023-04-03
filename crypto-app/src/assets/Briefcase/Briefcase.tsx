@@ -4,7 +4,7 @@ interface IBriefcase {
     fill: string,
 }
 
-const Briefcase = ({width, height, fill}: IBriefcase) => {
+export const Briefcase = ({width, height, fill}: IBriefcase) => {
     return (
         <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
              width={width} height={height} viewBox="0 0 64 64" xmlSpace="preserve">
@@ -17,5 +17,3 @@ const Briefcase = ({width, height, fill}: IBriefcase) => {
         </svg>
     )
 }
-
-export default Briefcase

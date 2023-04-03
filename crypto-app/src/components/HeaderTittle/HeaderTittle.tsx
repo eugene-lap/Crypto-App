@@ -1,7 +1,7 @@
-import { Briefcase } from "../../icons/Briefcase"
-import './PortfolioValue.scss'
+import { Briefcase } from "../../assets/Briefcase/Briefcase"
+import './HeaderTittle.scss'
 
-const PortfolioValue = () => {
+export const  HeaderTittle = (): JSX.Element => {
     return (
         <div className="portfolio-value">
             <p className="portfolio-value__content">Portfolio value: 134,32 USD +2,38 (1,80 %)</p>
@@ -9,5 +9,3 @@ const PortfolioValue = () => {
         </div>
     )
 }
-
-export default PortfolioValue
